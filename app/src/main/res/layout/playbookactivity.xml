@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <Button
-        android:id="@+id/buttonTwo"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout
+        android:id="@+id/btnLL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Playbook"/>
+        android:layout_alignParentBottom="true">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/playbookElim"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Elimination"
+            android:onClick="playbookElimClick"/>
+
+        <Button
+            android:id="@+id/playbookQual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Qualification"
+            android:onClick="playbookQualClick"/>
+    </LinearLayout>
+
+</RelativeLayout>

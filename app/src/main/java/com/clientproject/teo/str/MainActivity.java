@@ -2,8 +2,6 @@
 package com.clientproject.teo.str;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,6 +14,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.support.design.widget.NavigationView;
+
+import android.widget.Toast;
 
 import com.clientproject.teo.str.ChatApplication.ChatActivity;
 import com.clientproject.teo.str.DrawerFragment.FieldActivity;
@@ -26,21 +28,48 @@ import com.clientproject.teo.str.DrawerFragment.ScheduleActivity;
 import com.clientproject.teo.str.DrawerFragment.WrongActivity;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        //Note : OnFragmentInteractionListener of all the fragments
+        implements
+
+        NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //NOTE:  Checks first item in the navigation drawer initially
+        //navigationView.setCheckedItem(R.id.nav_home);
+
+        //NOTE:  Open fragment1 initially.
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.screen_area, new HomeActivity());
+        ft.commit();
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton homeButton = (FloatingActionButton) findViewById(R.id.homeButton);
+
+        Button homeButton = (Button) findViewById(R.id.homeButton);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "You are now Home.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+
+                Toast.makeText(getApplicationContext(), "Working on it.",
+                        Toast.LENGTH_SHORT).show();
+                Button homeButton = (Button) findViewById(R.id.homeButton);
+                homeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+                    }
+                });
+
             }
         });
 
@@ -62,6 +91,14 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+
+
+
+    public void onFragmentInteraction(String title) {
+        // NOTE:  Code to replace the toolbar title based current visible fragment
+        getSupportActionBar().setTitle(title);
     }
 
     @Override

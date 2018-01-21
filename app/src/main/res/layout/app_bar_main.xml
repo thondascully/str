@@ -22,12 +22,21 @@
 
     <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
+    <Button
         android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/ic_info_outline_black_24dp"
+        android:shadowColor="#A8A8A8"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:onClick="homeButtonClicked"
+        />
 
 </android.support.design.widget.CoordinatorLayout>
