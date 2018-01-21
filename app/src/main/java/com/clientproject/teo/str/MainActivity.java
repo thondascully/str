@@ -17,6 +17,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.clientproject.teo.str.ChatApplication.ChatActivity;
+import com.clientproject.teo.str.DrawerFragment.FieldActivity;
+import com.clientproject.teo.str.DrawerFragment.HomeActivity;
+import com.clientproject.teo.str.DrawerFragment.ManualActivity;
+import com.clientproject.teo.str.DrawerFragment.PlaybookActivity;
+import com.clientproject.teo.str.DrawerFragment.ScheduleActivity;
+import com.clientproject.teo.str.DrawerFragment.WrongActivity;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

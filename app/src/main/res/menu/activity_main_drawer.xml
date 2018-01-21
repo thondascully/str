@@ -6,28 +6,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_home"
             android:title="Home" />
         <item
             android:id="@+id/nav_playbook"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_playbook"
             android:title="Playbook" />
         <item
             android:id="@+id/nav_schedule"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_schedule"
             android:title="Our Schedule" />
         <item
             android:id="@+id/nav_field"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_field"
             android:title="Field" />
-
         <item
             android:id="@+id/nav_wrong"
-
+            android:icon="@drawable/ic_menu_wrong"
             android:title="Gone Wrong"/>
         <item
             android:id="@+id/nav_manual"
-
+            android:icon="@drawable/ic_menu_manual"
             android:title="Game Manual"/>
     </group>
 
@@ -35,7 +34,7 @@
         <menu>
             <item
                 android:id="@+id/nav_chat"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_chat"
                 android:title="Chat" />
 
         </menu>
