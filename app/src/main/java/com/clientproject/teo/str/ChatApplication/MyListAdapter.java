@@ -1,4 +1,4 @@
-package com.example.teo.myapplication;
+package com.clientproject.teo.str.ChatApplication;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 
 import com.clientproject.teo.str.ChatApplication.Message;
+import com.clientproject.teo.str.R;
 
 import org.w3c.dom.Text;
 
